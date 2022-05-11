@@ -1,0 +1,150 @@
+ /* For the login page */
+.login {
+	background-color: #bf8040;
+	color: #000000;
+	text-align: center;
+	font-size: 24px;
+}
+
+/* For the coversion page */
+.conversion {
+	background-color: #806699;
+	font-weight: bold;
+}
+
+/* Styles the around the buttons */
+.menu {
+  overflow: hidden;
+  border: 2px solid #000000;
+  background-color: #000000;
+}
+
+.menu a {
+   color: #FFFFFF;
+   text-align: center;
+   padding: 2px 18px;
+   font-size: 22px;
+}
+
+.menu a:hover {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+
+.menu a.active {
+   background-color: #A52A2A;
+   color: #FFFFFF;
+}
+
+/* Style the tab content */
+.tab-content {
+  padding: 6px 12px;
+  border: 2px solid #000000;
+  font-size: 18px;
+  background-color: #003366;
+  text-align: center;
+}
+
+/* Styling the speed div */
+#speed {
+	background-color: #33cc33;
+	float: left;
+	width: 33.33%;
+}
+
+/* Styling the length div */
+#length {
+	background-color: #cc3333;
+	color: #ffffff;
+	float: left;
+	width: 33.33%;
+}
+
+/* Styling the currency div */
+#currency {
+	background-color: #3380cc;
+	float: left;
+	width: 33.33%;
+}
+
+/* Styling the weight div */
+#weight {
+	background-color: #ff6600;
+	color: #ffffff;
+	float: left;
+	width: 33.33%;
+}
+
+/* Styling the temperature div */
+#temperature {
+	background-color: #cccc00;
+	float: left;
+	width: 33.33%;
+}
+
+/* Styling the pressure div */
+#pressure {
+	background-color: #804000;
+	color: #ffffff;
+	float: left;
+	width: 33.33%;
+}
+
+/* Styling the speed div */
+#speed2 {
+	background-color: #33cc33;
+}
+
+/* Styling the length div */
+#length2 {
+	background-color: #cc3333;
+	color: #ffffff;
+}
+
+/* Styling the currency div */
+#currency2 {
+	background-color: #3380cc;
+}
+
+/* Styling the weight div */
+#weight2 {
+	background-color: #ff6600;
+	color: #ffffff;
+}
+
+/* Styling the temperature div */
+#temperature2 {
+	background-color: #cccc00;
+}
+
+/* Styling the pressure div */
+#pressure2 {
+	background-color: #804000;
+	color: #ffffff;
+}
+
+.row {
+	font-size: 16px;
+}
+
+/* Ensures the columns are to the right, not below */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Changes the colour of the outputs to white */
+#answers {
+	color: #ffffff;
+}
+	
+
+h1 {
+	text-align: center;
+}
+
+#button {
+	background-color: #000000;
+	font-size: 20px;
+}
