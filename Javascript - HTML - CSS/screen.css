@@ -1,0 +1,999 @@
+
+/* 
+This is the default CSS that is displayed when on a mobile, 
+as this was designed as mobile first, desktop later. 
+*/
+body {
+   background-color: #6495ED;
+   font-family: "Times New Roman", Times, serif;
+   margin: 0;
+}
+
+footer {
+   background-color: #000000;
+   font-family: "Times New Roman", Times, serif;
+   color: #FFFFFF;
+   width: 100%;
+   height: 50px;
+}
+
+h1 {
+   font-family: "Bookman Old Style";
+   font-size: 24px;
+   background: #191970;
+   color: #80FF00;
+   text-align: center;
+   width: 90%;
+   height: 57px;
+   margin: auto;
+   margin-top: 25px;
+   padding-top: 10px;
+   overflow: auto;
+   vertical-align: center;
+}
+
+h2 {
+   font-family: "Bookman Old Style";
+   font-size: 20px;
+   text-align: center;
+   color: #000000;
+}
+
+.heading2 {
+   font-family: "Bookman Old Style";
+   font-size: 20px;
+   text-align: center;
+   color: #FFFFFF;
+}
+
+h3 {
+   font-family: "Bookman Old Style";
+   font-size: 18px;
+   text-align: center;
+   color: #000000;
+   background: #DCDCDC;
+   margin: auto;
+   width: 90%;
+   height: 35px;
+   padding-top: 7px;
+   margin-bottom: 10px;
+}
+
+h4 {
+   font-family: "Bookman Old Style";
+   font-size: 18px;
+   text-align: center;
+   color: #000000;
+   background: #DCDCDC;
+   margin: auto;
+   width: 90%;
+   height: 70px;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+
+h5 {
+   font-family: "Bookman Old Style";
+   font-size: 15px;
+   color: #000000;
+}
+
+
+/* 
+This piece of code is inspired from a YouTube video: https://www.youtube.com/watch?v=sjrp1FEHnyA
+This allowed me to form my own hamburger menu.
+*/
+
+.header {
+   background-color: #000000;
+   font-family: "Times New Roman", Times, serif;
+   color: #FFFFFF;
+   width: 100%;
+   height: 120px;
+   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+   z-index: 3;
+}
+
+/* Ensures the nav links are not visable */
+.header ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   overflow: hidden;
+}
+
+/* Drop-down menu properties */
+.header li a {
+   display: block;
+   padding: 20px 20px;
+   text-decoration: none;
+   border: 2px solid #000000;
+}
+
+/* Drop-down menu transitions, with colours and spacing */
+.header .menu {
+   clear: both;
+   max-height: 0;
+   transition: max-height 0.2s ease-out;
+   background: #009900;
+   text-align: center;
+   margin-top: 100px;
+   margin-bottom: 10px;
+}
+
+/* Burger menu icon's position and size */
+.header .menu-icon {
+   cursor: pointer;
+   float: right;
+   padding: 10px 20px 30px;
+   position: relative;
+   user-select: none;
+}
+
+/* Burger menu's line properties */
+.header .menu-icon .nav-icon {
+   background: #FFFFFF;
+   display: block;
+   height: 2px;
+   position: relative;
+   transition: background .2s ease-out;
+   width: 18px;
+   margin-top: 20px;
+}
+
+/* The lines above and below the burger menu icon's line */
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+   background: #FFFFFF;
+   content: '';
+   display: block;
+   height: 100%;
+   position: absolute;
+   transition: all .2s ease-out;
+   width: 100%;
+}
+
+/* Spacing below the middle burger menu line */
+.header .menu-icon .nav-icon:before {
+   top: 8px;
+}
+
+/* Spacing above the middle burger menu line */
+.header .menu-icon .nav-icon:after {
+   top: -8px;
+}
+
+/* Hides the checkbox */
+.header .menu-btn {
+   display: none;
+}
+
+/* Drop-down menu's height */
+.header .menu-btn:checked~.menu {
+   max-height: 350px;
+}
+
+/* Makes the middle burger menu line disappear */
+.header .menu-btn:checked~.menu-icon .nav-icon {
+   background: transparent;
+}
+
+/* Rotates bottom burger menu line */
+.header .menu-btn:checked~.menu-icon .nav-icon:before {
+   transform: rotate(-45deg);
+   top: 0;
+}
+
+/* Rotates top burger menu line */
+.header .menu-btn:checked~.menu-icon .nav-icon:after {
+   transform: rotate(45deg);
+   top: 0;
+}
+
+/* Logo properties */
+.header .logo {
+   display: inline-block;
+   float: left;
+   padding-left: 40px;
+   position: absolute;
+}
+
+.logo img {
+   width: 40%;
+   height: 120px;
+}
+
+/* Burger menu properties */
+label {
+   display: inline-block;
+   position: fixed;
+   margin-right: 20px;
+   border: 6px solid #FFFFFF;
+   border-radius: 100px;
+   color: #FFFFFF;
+   background-color: #009900;
+   cursor: pointer;
+   transition: background-color .2s, box-shadow .2s;
+   white-space: nowrap;
+}
+
+/* Burger menu lines position */
+label span {
+   position: absolute;
+   left: 30%;
+   top: 45%;
+}
+
+/* Changes colour of burger menu background when clicked to red */
+input:checked+label {
+   background-color: #FF0000;
+}
+
+nav {
+   font-family: Verdana, sans-serif;
+}
+
+/* Drop-down menu position */
+.menu-bar nav {
+   margin-top: 18px;
+   text-align: center;
+   float: right;
+   display: inline-block;
+   vertical-align: top;
+}
+
+/* Nav link properties */
+.menu a {
+   color: #FFFFFF;
+   text-align: center;
+   padding: 14px 16px;
+   font-size: 17px;
+}
+
+.menu a:hover {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+
+.menu a.active {
+   background-color: #A52A2A;
+   color: #FFFFFF;
+}
+
+/* Infographic properties */
+.infographic {
+   position: relative;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+}
+
+.infographic:hover {
+   cursor: pointer;
+}
+
+/* Infographic source position and sizing */
+.infographicSource {
+   margin-left: 5%;
+   color: #ffffff;
+   background-color: #006600;
+   width: 75%;
+   height: 35px;
+   padding: 6px 1px 1px 1px;
+   text-align: center;
+   max-width: 500px;
+}
+
+.infographicSource a {
+   color: #ffffff;
+   background-color: #000000;
+}
+
+/* Hides desktop infographic source */
+#desktopSource {
+   display: none;
+}
+
+/* Shows mobile infographic source */
+#mobileSource {
+   display: contents;
+}
+
+.websiteSource a {
+   color: #ffffff;
+   background-color: #000000;
+}
+
+.imageSource {
+   margin: auto;
+   text-align: center;
+}
+
+.imageSource a {
+   color: #ffffff;
+   background-color: #000000;
+}
+
+/* Homepage content box 1 properties */
+.homebox1 {
+   background-color: #00ADAD;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 1px 15px;
+   margin-top: 20px;
+   text-align: justify;
+}
+
+/* Homepage content box 2 properties */
+.homebox2 {
+   background-color: #006600;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 1px 15px;
+   margin-top: 20px;
+   color: #FFFFFF;
+   text-align: justify;
+}
+
+/* Webpages 2,3 & 4's content box 1 properties */
+.contentbox1 {
+   background-color: #00ADAD;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 1px 15px;
+   margin-top: 20px;
+   text-align: justify;
+}
+
+/* Webpages 2,3 & 4's content box 2 properties */
+.contentbox2 {
+   background-color: #006600;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 1px 15px;
+   margin-top: 20px;
+   color: #FFFFFF;
+   text-align: justify;
+}
+
+/* Creates horizontal rule to be the divider between content */
+hr {
+   background-color: #000000;
+   border: transparent;
+   width: 90%;
+   height: 1em;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+/* Previous button at bottom of screen properties */
+.previousButton {
+   margin-top: 15px;
+   background-color: #000000;
+   color: white;
+   margin-left: 15%;
+   margin-right: auto;
+   float: left;
+}
+
+/* Next button at bottom of screen properties */
+.nextButton {
+   margin-top: 15px;
+   background-color: #000000;
+   color: white;
+   margin-left: auto;
+   margin-right: 15%;
+   float: right;
+}
+
+a.nextButton,
+.previousButton {
+   text-decoration: none;
+   display: inline-block;
+   padding: 12px 6px;
+   font-size: 16px;
+   text-align: center;
+}
+
+a:hover.previousButton,
+a:hover.nextButton {
+   background-color: #ffffff;
+   color: #000000;
+}
+
+/* Used to clear element from all other elements */
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
+/* Wrapped around YouTube and Google Maps iFrames to keep aspect ratio */
+.iframeWrapper {
+   position: relative;
+   padding-bottom: 56.25%;
+}
+
+iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 90%;
+   margin-left: 5%;
+   margin-right: auto;
+   display: block;
+   border: none;
+}
+
+/* Twitter iFrame */
+.twitter-timeline {
+   margin-left: 5%;
+   margin-right: auto;
+}
+
+/* Facebook iFrame container */
+.facebook {
+   position: relative;
+   padding-bottom: 550px;
+   overflow: hidden;
+   height: 0;
+   margin-bottom: 10px;
+}
+/* Facebook iFrame */
+#facebookFeed {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 420px;
+   overflow: hidden;
+}
+
+footer {
+   text-align: center;
+   padding-top: 5px;
+   height: 45px;
+   margin-top: 15px;
+}
+
+.footerLinks a:link {
+   color: #FF0000;
+}
+
+.footerLinks a:hover {
+   color: #FFFFFF;
+}
+
+/* Keeps padding and border within the width and height*/
+* {
+   box-sizing: border-box
+}
+
+
+/* Slideshow container - Code inspired from https://www.w3schools.com/howto/howto_js_slideshow.asp */
+.slideshow-container {
+   width: 90%;
+   position: relative;
+   margin: auto;
+   overflow: hidden;
+}
+
+.carSlideshow {
+   width: 100%;
+   position: relative;
+   margin: auto;
+   overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides1,
+.mySlides2,
+.mySlides3,
+.mySlides4 {
+   display: none;
+   width: 100%;
+}
+
+/* Previous and next buttons on the images */
+.prev,
+.next {
+   cursor: pointer;
+   position: absolute;
+   top: 45%;
+   width: auto;
+   margin-top: -22px;
+   padding: 20px;
+   color: white;
+   font-weight: bold;
+   font-size: 25px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+}
+
+
+/* Position the next button to the right of image */
+.next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+}
+
+
+/* Adds see-through black background to buttons */
+.prev:hover,
+.next:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text of images */
+.text {
+   color: #ffffff;
+   font-size: 22px;
+   padding: 2px 4px;
+   position: absolute;
+   bottom: 1px;
+   width: 100%;
+   text-align: center;
+   background: #000000;
+   margin-bottom: 35px;
+}
+
+
+/* Numbers displayed top left of slideshow */
+.numbers {
+   color: #ffffff;
+   background: #000000;
+   font-size: 16px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+}
+
+/* The dots below slideshow */
+.dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #FFFFFF;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+   background-color: #000000;
+}
+
+/* The dots container */
+.dots {
+   text-align: center;
+}
+
+/* Makes images fade */
+.fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+
+/* Image opacity to full image */
+@-webkit-keyframes fade {
+   from {
+      opacity: .4
+   }
+   to {
+      opacity: 1
+   }
+}
+
+@keyframes fade {
+   from {
+      opacity: .4
+   }
+   to {
+      opacity: 1
+   }
+}
+
+/* Title above slideshow */
+#slideshowTitle {
+   font-family: "Bookman Old Style";
+   font-size: 18px;
+   text-align: center;
+   color: #000000;
+   background: #DCDCDC;
+   margin: auto;
+   width: 90%;
+   height: 35px;
+   padding-top: 7px;
+   margin-bottom: 10px;
+}
+
+
+/* The Modal (background) - Code inspired from https://www.w3schools.com/howto/howto_js_lightbox.asp */
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   padding-top: 50px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: #000000;
+   padding-top: 100px;
+}
+
+
+/* Close Button in lightbox*/
+.close {
+   color: white;
+   position: absolute;
+   top: 10px;
+   right: 25px;
+   font-size: 60px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: #999;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+/* Infographic display after clicking */
+.lightbox {
+   position: relative;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+}
+
+/* Sandero content box, text-align = justify to keep paragraphs neat and easier to read */
+#sandero {
+   background-color: #ffbf00;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 15px 15px;
+   margin-top: 20px;
+   text-align: justify;
+}
+
+/* Citigo content box, text-align = justify to keep paragraphs neat and easier to read */
+#citigo {
+   background-color: #00ADAD;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 15px 15px;
+   margin-top: 20px;
+   text-align: justify;
+}
+
+/* Picanto content box, text-align = justify to keep paragraphs neat and easier to read */
+#picanto {
+   background-color: #00b300;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 15px 15px;
+   margin-top: 20px;
+   text-align: justify;
+}
+
+/* Ibiza content box, text-align = justify to keep paragraphs neat and easier to read */
+#ibiza {
+   background-color: #cc99ff;
+   font-size: 15px;
+   width: 90%;
+   margin: auto;
+   padding: 1px 15px 15px 15px;
+   margin-top: 20px;
+   text-align: justify;
+}
+
+/* 
+When device width exceeds 960px, display desktop view 
+Some properties may be missing due to it crossing over from mobile to desktop
+*/
+@media only screen and (min-width: 960px){
+	
+/* Nav links are within flexbox */
+#flexbox-container {
+   display: flex;
+}
+
+/* Pushes nav links over to left */
+.header li {
+   float: left;
+}
+
+.header li a {
+   padding: 20px 20px;
+}
+
+/* Positioning of the nav links */
+.header .menu {
+   clear: none;
+   float: right;
+   max-height: none;
+   margin-top: 5px;
+   margin-left: 290px;
+   margin-right: 30px;
+   position: relative;
+}
+
+/* Hides hamburger menu */
+.header .menu-icon {
+   display: none;
+}
+
+.menu-bar nav {
+   float: left;
+}
+
+h1 {
+   margin-bottom: 20px;
+   width: 40%;
+}
+
+h2 {
+   font-size: 22px;
+}
+
+h3 {
+   font-size: 20px;
+   text-align: center;
+   color: #000000;
+   background: #DCDCDC;
+   margin: auto;
+   width: 65%;
+   height: 35px;
+   padding-top: 7px;
+   margin-bottom: 10px;
+   margin-left: 17%;
+   margin-right: auto;
+}
+
+h4 {
+   float: right;
+   font-size: 20px;
+   margin-right: 5%;
+   width: 35%;
+   height: 70px;
+   margin-top: 10px;
+   padding: 10px;
+}
+
+h5 {
+   font-size: 17px;
+}
+
+/* Hides the horizontal rules that were only present on mobile view */
+.mobilehr {
+   display: none;
+}
+
+.homebox1 {
+   background-color: #00ADAD;
+   font-size: 18px;
+   width: 38%;
+   margin-left: 5%;
+   padding: 1px 15px 1px 15px;
+   margin-top: 10px;
+   float: left;
+}
+
+.homebox2 {
+   background-color: #006600;
+   font-size: 18px;
+   width: 38%;
+   margin-right: auto;
+   margin-left: 5%;
+   margin-top: 40px;
+   margin-bottom: 20px;
+   padding: 1px 15px 1px 15px;
+   color: #FFFFFF;
+   float: left;
+}
+
+.contentbox1 {
+   background-color: #00ADAD;
+   font-size: 18px;
+   width: 52%;
+   margin-left: 5%;
+   padding: 1px 15px 1px 15px;
+   margin-top: 10px;
+   float: left;
+}
+
+.contentbox2 {
+   background-color: #006600;
+   font-size: 18px;
+   width: 52%;
+   margin-right: auto;
+   margin-left: 5%;
+   margin-top: 40px;
+   margin-bottom: 15px;
+   padding: 1px 15px 1px 15px;
+   color: #FFFFFF;
+   float: left;
+}
+
+.slideshow-container {
+   width: 50%;
+   margin-right: 5%;
+   overflow: hidden;
+   float: right;
+   margin-bottom: 20px;
+}
+
+.dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #FFFFFF;
+   border-radius: 50%;
+   transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+   background-color: #000000;
+}
+
+#slideshowTitle {
+   float: right;
+   font-size: 20px;
+   margin-right: 5%;
+   width: 50%;
+   height: 35px;
+   padding-top: 7px;
+   margin-top: 50px;
+   margin-bottom: 10px;
+}
+
+.iframeWrapper {
+   position: relative;
+   padding-bottom: 40%;
+}
+
+iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 65%;
+   margin-left: 17%;
+   margin-right: auto;
+   display: block;
+   border: none;
+}
+
+.infographic {
+   position: relative;
+   margin-left: auto;
+   margin-right: 5%;
+   width: 35%;
+   float: right;
+   margin-bottom: 15px;
+}
+
+.infographicSource {
+   font-size: 18px;
+   width: 33%;
+   float: right;
+   margin-right: 5%;
+   margin-top: auto;
+   margin-bottom: 10px;
+}
+
+/* Hides infographic source that is only visable on mobile */
+#mobileSource {
+   display: none;
+}
+
+/* Shows infographic source that is only visable on desktop */
+#desktopSource {
+   display: contents;
+}
+
+.lightbox {
+   width: 55%;
+}
+
+.twitter-timeline {
+   width: 60% !important;
+   margin-left: 20%;
+   margin-right: auto;
+}
+
+.facebook {
+   position: relative;
+   padding-bottom: 550px;
+   overflow: hidden;
+   height: 0;
+   margin-bottom: 10px;
+}
+
+#facebookFeed {
+   position: absolute;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+   margin-left: 37%;
+}
+
+#sandero {
+   display: inline-block;
+   background-color: #ffbf00;
+   font-size: 18px;
+   width: 44%;
+   margin-right: 5%;
+   padding: 1px 15px 15px 15px;
+   margin-top: 20px;
+   float: right;
+   position: relative;
+}
+
+#citigo {
+   display: inline-block;
+   background-color: #00ADAD;
+   font-size: 18px;
+   width: 44%;
+   margin-left: 5%;
+   padding: 1px 15px 15px 15px;
+   margin-top: 20px;
+   position: relative;
+}
+
+#picanto {
+   display: inline-block;
+   font-size: 18px;
+   width: 44%;
+   margin-left: 5%;
+   margin-top: 35px;
+   position: relative;
+}
+
+#ibiza {
+   display: inline-block;
+   font-size: 18px;
+   width: 44%;
+   margin-right: 5%;
+   margin-top: 35px;
+   float: right;
+   position: relative;
+}
+
+.carSlideshow {
+   width: 100%;
+   position: relative;
+   margin-top: 10px;
+   overflow: hidden;
+}
+
+footer {
+   text-align: center;
+   padding-top: 5px;
+   height: 60px;
+   margin-top: 15px;
+   font-size: 20px;
+}
+
+/* End of desktop view media query */
+}

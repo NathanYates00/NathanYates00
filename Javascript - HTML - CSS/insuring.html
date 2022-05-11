@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Insuring your car</title>
+	  <!-- Links to the website's CSS -->
+      <link rel="stylesheet" href="screen.css"/>
+	  <!-- Favicons for all devices used to view the website -->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <header class="header">
+         <div class="menu-bar">
+		 
+		    <!-- Container for the menu, inside is the logo and nav links -->
+            <div id="menu-container">
+               <a href="index.html" class="logo">
+               <img src="images/logo.png" alt="Logo"></a>
+               <nav>
+			   
+				  <!-- Input for current status of hamburger menu, default is off so drop-down menu is hidden -->
+                  <input class="menu-btn" type="checkbox" id="menu-btn"/>
+				  
+				  <!-- Hamburger menu transition is created through the label tag -->
+                  <label class="menu-icon" for="menu-btn">
+                  Menu<span class="nav-icon"></span>
+                  </label>
+				  
+				  <!-- A container to make the nav links in flexbox -->
+                  <ul class="menu" id = "flexbox-container">
+                     <li>
+                        <a href="index.html">Home Page</a>
+                     </li>
+                     <li>
+                        <a href="purchasing.html">Purchasing guidance</a>
+                     </li>
+                     <li>
+                        <a class="active" href="insuring.html">Insuring your car</a>
+                     </li>
+                     <li>
+                        <a href="runningCosts.html">Running costs</a>
+                     </li>
+                     <li>
+                        <a href="recommended.html">Cars right for you</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <h1>Insuring your car</h1>
+	  
+      <section>
+		 <!-- First content box -->
+         <div class="contentbox1">
+            <h2>Main types of car insurance</h2>
+            <h5>Third party insurance</h5>
+            <p>Third party is the bare minimum requirement legally, which covers yourself for damage to another person's vehicle, property or injury in an accident. Although it covers the other persons car, it does not cover the damages of your own.</p>
+            
+			<h5>Third party, fire and theft insurance</h5>
+            <p>Identical to third party, it covers the damage of the other person's vehicle, property or injury, but also covers your own car for loss or damage via theft or fire.</p>
+           
+ 		    <h5>Comprehensive insurance</h5>
+            <p>Lastly is comprehensive, which includes third party, fire and theft insurance, as well as cover for stolen belongings within your car, medical or legal expenses, hiring a replacement vehicle and also covers death or injury to yourself or a family member.</p>
+            
+			<h2>Which insurance type should I go for?</h2>
+            <p>Obviously with the third party insurance being the cheapest option due to it only covering the other person within the accident, some may opt for the third party option.</p>
+            <p>On the other hand, fire and theft can be common nowadays, and dependant on your area where you live where theft could be a problem, maybe you would prefer to opt for fire and theft insurance on top of third party.</p>
+            <p>Comprehensive is the most expensive, and may be more enticing once you gain a few years of no-claims before adding it to your policy. Comprehensive does cover you entirely though, which is the peace of mind option that some may prefer.</p>
+            
+			<br>
+			<!-- Link to information source -->
+			<p class = "websiteSource">Information via: <a href="https://www.citizensadvice.org.uk/consumer/insurance/insurance/types-of-insurance/vehicle-insurance/vehicle-insurance/" target="_blank"> Citizens advice. </a></p>
+         </div>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+         <H4>Types of coverage <br> (Click to enlarge)</H4>
+		 
+		 <!-- Link to infographic source shown only on desktop view -->
+         <div id = "desktopSource">
+            <p class = "infographicSource">Infographic via: <a href="https://www.buckaffiliates.com/" target="_blank"> Buck Affiliates.</a></p>
+         </div>
+		 
+         <!-- Infographic in the lightbox -->
+         <img class="infographic" src="images/insuranceInfographic.jpg" onclick="openModal();currentSlide(1)" alt="Car insurance infographic">
+        
+		 <!-- The Modal (Background) -->
+         <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+           
+		    <!-- Infographic once clicked -->
+            <img class="lightbox" src="images/insuranceInfographic.jpg" onclick="currentSlide(1)" alt="Car insurance infographic">
+         </div>
+		 
+		 <!-- Javascript for the infographic lightbox -->
+         <script>
+            <!-- Controls to open the Modal -->
+            function openModal() {
+              document.getElementById("myModal").style.display = "block";
+            }
+            
+            <!-- Controls to close the Modal -->
+            function closeModal() {
+              document.getElementById("myModal").style.display = "none";
+            }
+         </script>
+		 
+		 <!-- Link to infographic source shown only on mobile view -->
+         <div id = "mobileSource">
+            <p class = "infographicSource">Infographic via: <a href="https://www.buckaffiliates.com/" target="_blank"> Buck Affiliates.</a></p>
+         </div>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+		 <!-- Second content box -->
+         <div class="contentbox2">
+            <h2 class="heading2">What is no-claims?</h2>
+            <p>No-claims is added each year you do not make a claim, which is beneficial as this then brings down the cost of your policy. Usually this caps at about 10 years which will then display as 10+ years.</p>
+            <p>Due to having zero no-claims when you are a new driver, insurance costs will be at the highest point, which does decide which car you can have. Typically a car that is less than £1000 to buy will still be over £1000 a year on insurance as you are more likely to have an accident compared to someone that is experienced.</p>
+            
+			<h2 class="heading2">Where can I get the best insurance price?</h2>
+            <p>When looking for insurance policies, the best method of finding the best price for you is to look around at different insurance providers to get a quote, and then go with the best one. Compare the market is one of the best tools to use when searching for car insurance, and you can tailor the policy to your liking, picking your own insurance type. Additionally, take into consideration the car's insurance group, as the lower the group, the lower the insurance will be.</p>
+            <p class = "websiteSource">Go to <a href="https://www.comparethemarket.com/car-insurance/" target="_blank"> CompareTheMarket</a> to find your policy.</p>
+         </div>
+         
+		 <!-- Horizontal rule present on both mobile and desktop view -->
+		 <hr>
+         <h3>Finding the best car insurance</h3>
+		 
+		 <!-- Wrapper for YouTube iFrame -->
+         <div class="iframeWrapper">
+            <iframe src="https://www.youtube.com/embed/HrtZ6B20VS4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>								
+         </div>
+      </section>
+	  
+	  <!-- Clearfix present to ensure buttons clears other elements -->
+      <div class="clearfix">
+         <a href="purchasing.html" class="previousButton">&#8592; Previous Page</a>
+         <a href="runningCosts.html" class="nextButton">Next Page &#8594;</a>
+      </div>
+	  
+      <footer>
+		 <!-- Small text in footer -->
+         <small>&copy; Copyright 2021, Produced by Nathan Yates</small>
+         <br>
+		 <!-- When email link clicked opens Gmail webpage creating email draft to 311624@gllm.ac.uk -->
+         <div class="footerLinks">
+            <small>Email Address:
+            <a href="mailto:311624@gllm.ac.uk">311624@gllm.ac.uk</a>
+            </small>											
+         </div>
+      </footer>
+   </body>
+</html>

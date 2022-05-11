@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Cars right for you</title>
+	  <!-- Links to the website's CSS -->
+      <link rel="stylesheet" href="screen.css"/>
+	  <!-- Favicons for all devices used to view the website -->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <header class="header">
+         <div class="menu-bar">
+		 
+		    <!-- Container for the menu, inside is the logo and nav links -->
+            <div id="menu-container">
+               <a href="index.html" class="logo">
+               <img src="images/logo.png" alt="Logo"></a>
+               <nav>
+				  
+				  <!-- Input for current status of hamburger menu, default is off so drop-down menu is hidden -->
+                  <input class="menu-btn" type="checkbox" id="menu-btn"/>
+				  
+				  <!-- Hamburger menu transition is created through the label tag -->
+                  <label class="menu-icon" for="menu-btn">
+                  Menu<span class="nav-icon"></span>
+                  </label>
+				  
+				  <!-- A container to make the nav links in flexbox -->
+                  <ul class="menu"  id = "flexbox-container">
+                     <li>
+                        <a href="index.html">Home Page</a>
+                     </li>
+                     <li>
+                        <a href="purchasing.html">Purchasing guidance</a>
+                     </li>
+                     <li>
+                        <a href="insuring.html">Insuring your car</a>
+                     </li>
+                     <li>
+                        <a href="runningCosts.html">Running costs</a>
+                     </li>
+                     <li>
+                        <a class="active"
+                           href="recommended.html">Cars right for you</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <h1>Cars right for you</h1>
+	  
+      <section>
+		 <!-- First recommended car box -->
+         <div id="citigo">
+            <h2>Skoda Citigo</h2>
+            <p>The Skoda Citigo is one of the four recommended cars on this website, due to it being a great first car and not bad looking too. The specifications of the car are favourable for new drivers and get the job done nicely.</p>
+            <p>The author of the website has had a new Citigo in the past and it served well for almost three years, had no problems and was great for short and long journeys.</p>
+            
+			<h2>Specifications</h2>
+            <p>With a very high fuel economy of around 50 miles per gallon (MPG), the Citigo does extremely well on fuel for a petrol engine.  It also has 60 Brake Horse Power (BHP).<br> Being in insurance group 1, the Citigo's car insurance will be one of the lowest cost policies around, a great factor for new drivers. <br> Additionally, the road tax is only £20 a year, compared to some that are way over £100 a year.</p>
+            
+			<!-- Link to information source -->
+			<p class = "websiteSource" > Statistics via: <a href="https://www.parkers.co.uk/skoda/citigo/specs/" target="_blank">Parkers</a></p>
+            
+			<!-- Link to download brochure -->
+			<p class = "websiteSource" > Click to download the <a href="download/Citigo-eBrochure.pdf" target="_blank" download="Citigo-eBrochure">Citigo-eBrochure</a></p>
+            
+			<!-- Image slideshow container -->
+			<div class="carSlideshow">
+			
+			   <!-- Images that are numbered and have caption text below the images -->
+               <div class="mySlides1 fade">
+                  <div class="numbers">1 / 11</div>
+                  <img src="images/citigo1.jpg" style="width:100%" alt="Skoda Citigo front" loading="eager">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">2 / 11</div>
+                  <img src="images/citigo2.jpg" style="width:100%" alt="Skoda Citigo rear">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">3 / 11</div>
+                  <img src="images/citigo3.jpg" style="width:100%" alt="Skoda Citigo interior">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">4 / 11</div>
+                  <img src="images/citigo4.jpg" style="width:100%" alt="Skoda Citigo rear">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">5 / 11</div>
+                  <img src="images/citigo5.jpg" style="width:100%" alt="Skoda Citigo interior">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">6 / 11</div>
+                  <img src="images/citigo6.jpg" style="width:100%" alt="Skoda Citigo interior">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">7 / 11</div>
+                  <img src="images/citigo7.jpg" style="width:100%" alt="Skoda Citigo interior">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">8 / 11</div>
+                  <img src="images/citigo8.jpg" style="width:100%" alt="Skoda Citigo interior">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">9 / 11</div>
+                  <img src="images/citigo9.jpg" style="width:100%" alt="Skoda Citigo boot">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">10 / 11</div>
+                  <img src="images/citigo10.jpg" style="width:100%" alt="Skoda Citigo lights">
+               </div>
+			   
+               <div class="mySlides1 fade">
+                  <div class="numbers">11 / 11</div>
+                  <img src="images/citigo11.jpg" style="width:100%" alt="Skoda Citigo wheel">
+               </div>
+			   
+               <!-- Previous and next buttons on each image, ensures that only this slideshow is changed when buttons are clicked (-1,0) & (1,0) -->
+               <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+               <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+			
+			<!-- Link to images source -->
+            <p class = "imageSource">Images via: <a href="https://www.autoexpress.co.uk/skoda/citigo" target="_blank"> Auto Express</a></p>
+         </div>
+		 
+		 <!-- Second recommended car box -->
+         <div id="sandero">
+            <h2>Dacia Sandero</h2>
+            <p>The Dacia Sandero has been poor in the past, but with the new model, the Sandero is one to consider.<br> A great car that is very cheap for what you get, with a price of around £8000 new.</p>
+            <p>Due to the new model being so good, it's the 2021 winner of the "Best car for under £10,000". You'll be seeing more of these Sanderos around with their reputation being high currently.</p>
+            
+			<h2>Specifications</h2>
+            <p>Similar to the Citigo, the Sandero has a very high fuel economy of around 50 MPG too, doing very well on a full tank of fuel. Having 90 BHP as well.<br> The insurance group is slightly higher being around 8, but will still be a low cost policy which is very favourable.<br> Identical to the Citigo, the road tax is £20 a year.</p>
+            
+			<!-- Link to information source -->
+			<p class = "websiteSource" > Statistics via: <a href="https://www.parkers.co.uk/dacia/sandero/specs/" target="_blank">Parkers</a></p>
+            
+			<!-- Link to download brochure -->
+			<p class = "websiteSource" > Click to download the <a href="download/Sandero-eBrochure.pdf" target="_blank" download="Sandero-eBrochure">Sandero-eBrochure</a></p>
+            
+			<!-- Image slideshow container -->
+			<div class="carSlideshow">
+			
+			   <!-- Images that are numbered and have caption text below the images -->
+               <div class="mySlides2 fade">
+                  <div class="numbers">1 / 11</div>
+                  <img src="images/sandero1.jpg" style="width:100%" alt="Dacia Sandero front" loading="eager">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">2 / 11</div>
+                  <img src="images/sandero2.jpg" style="width:100%" alt="Dacia Sandero rear" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">3 / 11</div>
+                  <img src="images/sandero3.jpg" style="width:100%" alt="Dacia Sandero interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">4 / 11</div>
+                  <img src="images/sandero4.jpg" style="width:100%" alt="Dacia Sandero side view" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">5 / 11</div>
+                  <img src="images/sandero5.jpg" style="width:100%" alt="Dacia Sandero interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">6 / 11</div>
+                  <img src="images/sandero6.jpg" style="width:100%" alt="Dacia Sandero interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">7 / 11</div>
+                  <img src="images/sandero7.jpg" style="width:100%" alt="Dacia Sandero bootspace" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">8 / 11</div>
+                  <img src="images/sandero8.jpg" style="width:100%" alt="Dacia Sandero interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">9 / 11</div>
+                  <img src="images/sandero9.jpg" style="width:100%" alt="Dacia Sandero lights" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">10 / 11</div>
+                  <img src="images/sandero10.jpg" style="width:100%" alt="Dacia Sandero lights" loading="lazy">
+               </div>
+			   
+               <div class="mySlides2 fade">
+                  <div class="numbers">11 / 11</div>
+                  <img src="images/sandero11.jpg" style="width:100%" alt="Dacia Sandero lights" loading="lazy">
+               </div>
+			   
+			   <!-- Previous and next buttons on each image, ensures that only this slideshow is changed when buttons are clicked (-1,1) & (1,1) -->
+               <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+               <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+			
+			<!-- Link to images source -->
+            <p class = "imageSource">Images via: <a href="https://www.topgear.com/car-reviews/dacia/sandero" target="_blank"> Top Gear</a></p>
+         </div>
+		 
+		 <!-- Third recommended car box -->
+         <div id="picanto">
+            <h2>Kia Picanto</h2>
+            <p>Next is the Picanto, a great to drive car which is both well made and spacious. The exterior is nice looking and the interior looks more expensive than what it is.<br> A lot more popular in recent years, especially for new drivers.</p>
+            <p>Although it is a small car, majority in this list are small. But this feature helps with being in cities as large vehicles can cause a headache if inexperienced with city driving.</p>
+            
+			<h2>Specifications</h2>
+            <p>You do find many of these small city cars to have great fuel economy, and this is no different being around 55 MPG. Also having 70 BHP.<br>Like the Citigo, it is in the lowest insurance group of 1, so those insurance policies will be as low as possible, great for someone with zero no-claims.</p>
+            
+			<!-- Link to information source -->
+			<p class = "websiteSource" > Statistics via: <a href="https://www.parkers.co.uk/kia/picanto/specs/" target="_blank">Parkers</a></p>
+           
+			<!-- Link to download brochure -->
+		    <p class = "websiteSource" > Click to download the <a href="download/Picanto-eBrochure.pdf" target="_blank" download="Picanto-eBrochure">Picanto-eBrochure</a></p>
+           
+			<!-- Image slideshow container -->
+ 		    <div class="carSlideshow">
+			
+			   <!-- Images that are numbered and have caption text below the images -->
+               <div class="mySlides3 fade">
+                  <div class="numbers">1 / 7</div>
+                  <img src="images/picanto1.jpg" style="width:100%" alt="Kia Picanto side view" loading="eager">
+               </div>
+			   
+               <div class="mySlides3 fade">
+                  <div class="numbers">2 / 7</div>
+                  <img src="images/picanto2.jpg" style="width:100%" alt="Kia Picanto near" loading="lazy">
+               </div>
+			   
+               <div class="mySlides3 fade">
+                  <div class="numbers">3 / 7</div>
+                  <img src="images/picanto3.jpg" style="width:100%" alt="Kia Picanto interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides3 fade">
+                  <div class="numbers">4 / 7</div>
+                  <img src="images/picanto4.jpg" style="width:100%" alt="Kia Picanto interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides3 fade">
+                  <div class="numbers">5 / 7</div>
+                  <img src="images/picanto5.jpg" style="width:100%" alt="Kia Picanto boot space" loading="lazy">
+               </div>
+			   
+               <div class="mySlides3 fade">
+                  <div class="numbers">6 / 7</div>
+                  <img src="images/picanto6.jpg" style="width:100%" alt="Kia Picanto light" loading="lazy">
+               </div>
+			   
+               <div class="mySlides3 fade">
+                  <div class="numbers">7 / 7</div>
+                  <img src="images/picanto7.jpg" style="width:100%" alt="Kia Picanto front" loading="lazy">
+               </div>
+			   
+			   <!-- Previous and next buttons on each image, ensures that only this slideshow is changed when buttons are clicked (-1,2) & (1,2) -->
+               <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+               <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+            </div>
+			
+			<!-- Link to images source -->
+            <p class = "imageSource">Images via: <a href="https://www.autoexpress.co.uk/108590/kia-picanto-review-images" target="_blank"> Auto Express</a></p>
+         </div>
+		 
+		 <!-- Fourth recommended car box -->
+         <div id="ibiza">
+            <h2>Seat Ibiza</h2>
+            <p>The Ibiza has been great for years, and continues to be purchased by both new and more experienced drivers. A more larger car than the other three listed above, and similar to a Ford Fiesta or the Vauxhall Corsa.</p>
+            <p>The exterior and interior have smart styling, additionally coming with lots of in-car technology. It is very affordable for the product you get, and does not cost much to run either.</p>
+            
+			<h2>Specifications</h2>
+            <p>The Ibiza has a fuel economy of around 45 MPG, which is lower than the other cars listed but still a high MPG to have. It also comes with 80 BHP. <br>It is in insurance group 2, so the insurance policy is not going to be a high price, and will decrease as you gain your no-claims bonus.<br>The road tax is £150, an additional £130 per year compared to the cars listed.</p>
+            
+			<!-- Link to information source -->
+			<p class = "websiteSource" > Statistics via: <a href="https://www.parkers.co.uk/skoda/citigo/specs/" target="_blank">Parkers</a></p>
+            
+			<!-- Link to download brochure -->
+			<p class = "websiteSource" > Click to download the <a href="download/Ibiza-eBrochure.pdf" target="_blank" download="Ibiza-eBrochure">Ibiza-eBrochure</a></p>
+            
+			<!-- Image slideshow container -->
+			<div class="carSlideshow">
+               
+			   <!-- Images that are numbered and have caption text below the images -->
+			   <div class="mySlides4 fade">
+                  <div class="numbers">1 / 10</div>
+                  <img src="images/ibiza1.jpg" style="width:100%" alt="Seat Ibiza side view" loading="eager">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">2 / 10</div>
+                  <img src="images/ibiza2.jpg" style="width:100%" alt="Seat Ibiza near" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">3 / 10</div>
+                  <img src="images/ibiza3.jpg" style="width:100%" alt="Seat Ibiza interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">4 / 10</div>
+                  <img src="images/ibiza4.jpg" style="width:100%" alt="Seat Ibiza interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">5 / 10</div>
+                  <img src="images/ibiza5.jpg" style="width:100%" alt="Seat Ibiza interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">6 / 10</div>
+                  <img src="images/ibiza6.jpg" style="width:100%" alt="Seat Ibiza interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">7 / 10</div>
+                  <img src="images/ibiza7.jpg" style="width:100%" alt="Seat Ibiza interior" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">8 / 10</div>
+                  <img src="images/ibiza8.jpg" style="width:100%" alt="Seat Ibiza boot space" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">9 / 10</div>
+                  <img src="images/ibiza9.jpg" style="width:100%" alt="Seat Ibiza light" loading="lazy">
+               </div>
+			   
+               <div class="mySlides4 fade">
+                  <div class="numbers">10 / 10</div>
+                  <img src="images/ibiza10.jpg" style="width:100%" alt="Seat Ibiza side mirror" loading="lazy">
+               </div>
+			   
+			   <!-- Previous and next buttons on each image, ensures that only this slideshow is changed when buttons are clicked (-1,3) & (1,3) -->
+               <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+               <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+            </div>
+			
+			<!-- Link to images source -->
+            <p class = "imageSource">Images via: <a href="https://www.autoexpress.co.uk/100236/seat-ibiza-review-pictures" target="_blank"> Auto Express</a></p>
+         </div>
+		 
+		 <!-- Javascript for the image slideshow -->
+         <script>
+			<!-- Slide index for the four different slideshows -->
+            var slideIndex = [1,1,1,1];
+            var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+            showSlides(1, 2);
+            showSlides(1, 3);
+            
+			<!-- Previous and next button controls -->
+            function plusSlides(n, no) {
+              showSlides(slideIndex[no] += n, no);
+            }
+            
+			 <!-- Image transitions, hides all images apart from the one meant to be present -->
+            function showSlides(n, no) {
+              var i;
+              var x = document.getElementsByClassName(slideId[no]);
+              if (n > x.length) {slideIndex[no] = 1}    
+              if (n < 1) {slideIndex[no] = x.length}
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+              }
+              x[slideIndex[no]-1].style.display = "block";  
+            }
+         </script>	
+
+		 <!-- Horizontal rule present on both mobile and desktop view -->
+         <hr>
+         <H3>Drivers of Prestatyn social media pages</H3>
+		 
+		 <!-- Wrapper for Facebook iFrame -->
+         <div class="facebook">
+            <iframe id="facebookFeed" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdriversofprestatyn%2F&tabs=timeline&width=420px&height=550px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>							
+         </div>
+		 
+		 <!-- Twitter iFrame -->
+         <a class="twitter-timeline" data-height="550" data-width="90%" data-theme="dark" href="https://twitter.com/driverspeugeot?ref_src=twsrc%5Etfw">Tweets by driverspeugeot</a> <script async src="https://platform.twitter.com/widgets.js"></script>										
+        
+		 <!-- Horizontal rule present on both mobile and desktop view -->
+		 <hr>
+         <H3>Drivers of Prestatyn dealership</H3>
+		 
+		 <!-- Wrapper for Google Maps iFrame -->
+         <div class="iframeWrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5666.006831857895!2d-3.3925686032624687!3d53.33855858039234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48652a0b37b0b467%3A0x46490d492523b378!2sDrivers%20Of%20Prestatyn%20Ltd!5e0!3m2!1sen!2suk!4v1615497232405!5m2!1sen!2suk" allowfullscreen="" loading="lazy"></iframe>								
+         </div>
+      </section>
+	  
+	  <!-- Clearfix present to ensure button clears other elements -->
+      <div class="clearfix">
+         <a href="runningCosts.html" class="previousButton">&#8592; Previous Page</a>
+      </div>
+	  
+	  
+      <footer>
+		 <!-- Small text in footer -->
+         <small>&copy; Copyright 2021, Produced by Nathan Yates</small>
+         <br>
+		 <!-- When email link clicked opens Gmail webpage creating email draft to 311624@gllm.ac.uk -->
+         <div class="footerLinks">
+            <small>Email Address:
+            <a href="mailto:311624@gllm.ac.uk">311624@gllm.ac.uk</a>
+            </small>											
+         </div>
+      </footer>
+   </body>
+</html>

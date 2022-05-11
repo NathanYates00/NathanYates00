@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Home page</title>
+	  <!-- Links to the website's CSS -->
+      <link rel="stylesheet" href="screen.css"/>
+	  <!-- Favicons for all devices used to view the website -->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <header class="header">
+         <div class="menu-bar">
+		 
+			<!-- Container for the menu, inside is the logo and nav links -->
+            <div id="menu-container">
+               <a href="index.html" class="logo">
+               <img src="images/logo.png" alt="Logo"></a>
+               <nav>
+			   
+				  <!-- Input for current status of hamburger menu, default is off so drop-down menu is hidden -->
+                  <input class="menu-btn" type="checkbox" id="menu-btn"/>
+				  
+				  <!-- Hamburger menu transition is created through the label tag -->
+                  <label class="menu-icon" for="menu-btn">
+                  Menu<span class="nav-icon"></span>
+                  </label>
+				  
+				  <!-- A container to make the nav links in flexbox -->
+                  <ul class="menu"  id = "flexbox-container">
+                     <li>
+                        <a class="active" href="">Home Page</a>
+                     </li>
+                     <li>
+                        <a href="purchasing.html">Purchasing guidance</a>
+                     </li>
+                     <li>
+                        <a href="insuring.html">Insuring your car</a>
+                     </li>
+                     <li>
+                        <a href="runningCosts.html">Running costs</a>
+                     </li>
+                     <li>
+                        <a href="recommended.html">Cars right for you</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>	  
+      <h1>Car guidance for new drivers</h1>
+	  
+      <section>
+		 <!-- First content box -->
+         <div class="homebox1">
+            <h2>What is our aim?</h2>
+            <p>This website is present to assist newly passed drivers. The target group are around the age of 17 to 25 years old, who have just passed their driving test and are now in need of a reliable car.</p>
+            
+			<h2>What kind of car do I need though?</h2>
+            <p>This is the kind of question you'll be asking yourself, and with the help of this website we can look at the different areas of choosing the right car for you, reviewing all the variables that determines an ideal car for a newly passed driver.</p>
+         </div>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+         <H3 id = "slideshowTitle">Affordable cars for new drivers</H3>
+		 
+         <!-- Image slideshow container -->
+         <div class="slideshow-container">
+		 
+            <!-- Images that are numbered and have caption text below the images -->
+            <div class="mySlides fade">
+               <div class="numbers">1 / 5</div>
+               <img src="images/citigo.jpg" style="width:100%" alt="Skoda Citigo" loading="eager">
+               <div class="text">Skoda Citigo</div>
+            </div>
+			
+            <div class="mySlides fade">
+               <div class="numbers">2 / 5</div>
+               <img src="images/aygo.jpg" style="width:100%" alt="Toyota Aygo" loading="lazy">
+               <div class="text">Toyota Aygo</div>
+            </div>
+			
+            <div class="mySlides fade">
+               <div class="numbers">3 / 5</div>
+               <img src="images/dacia.jpg" style="width:100%" alt="Dacia Sandero" loading="lazy">
+               <div class="text">Dacia Sandero</div>
+            </div>
+			
+            <div class="mySlides fade">
+               <div class="numbers">4 / 5</div>
+               <img src="images/fiat.jpg" style="width:100%" alt="Fiat 500"loading="lazy">
+               <div class="text">Fiat 500</div>
+            </div>
+			
+            <div class="mySlides fade">
+               <div class="numbers">5 / 5</div>
+               <img src="images/kia.jpg" style="width:100%" alt="Kia Picanto" loading="lazy">
+               <div class="text">Kia Picanto</div>
+            </div>
+			
+            <!-- Previous and next buttons on each image -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <br>
+			
+            <!-- Container of the dots -->
+            <div class = "dots">
+			   <!-- The dots under the slideshow -->
+               <span class="dot" onclick="currentSlide(1)"></span>
+               <span class="dot" onclick="currentSlide(2)"></span>
+               <span class="dot" onclick="currentSlide(3)"></span>
+               <span class="dot" onclick="currentSlide(4)"></span>
+               <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+         </div>
+		 
+		 <!-- Javascript for the image slideshow -->
+         <script>
+			<!-- Slide index for the slideshow -->
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            <!-- Previous and next button controls -->
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            <!-- Dots controls  -->
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+			
+            <!-- Image transitions, hides all images apart from the one meant to be present -->
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+         </script>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+		 <!-- Second content box -->
+         <div class="homebox2">
+            <h2 class="heading2">What will this website cover?</h2>
+            <p>The targeted areas within the website will be:</p>
+            <ul>
+               <li>Car purchasing guidance</li>
+               <li>Insuring your car</li>
+               <li>Car running costs </li>
+               <li>Cars right for you</li>
+            </ul>
+            
+			<h2 class="heading2">How will this website help me?</h2>
+            <p>The top priority is to point you in the right direction. Not giving you the final answer on which car you should go out and buy, but will instead give you information to consider before spending your savings on your first car.</p>
+         </div>
+		 
+		 <!-- Horizontal rule present on both mobile and desktop view -->
+         <hr>
+         <h3>10 of the best city cars for new drivers</h3>
+		 
+		 <!-- Wrapper for YouTube iFrame -->
+         <div class="iframeWrapper">
+            <iframe src="https://www.youtube.com/embed/nspItq0Tg6Q" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>													
+         </div>
+      </section>
+	  
+	  <!-- Clearfix present to ensure button clears other elements -->
+      <div class="clearfix">
+         <a href="purchasing.html" class="nextButton">Next Page &#8594;</a>
+      </div>
+	  
+      <footer>
+		 <!-- Small text in footer -->
+         <small>&copy; Copyright 2021, Produced by Nathan Yates</small>
+         <br>
+		 <!-- When email link clicked opens Gmail webpage creating email draft to 311624@gllm.ac.uk -->
+         <div class="footerLinks">
+            <small>Email Address:
+            <a href="mailto:311624@gllm.ac.uk">311624@gllm.ac.uk</a>
+            </small>											
+         </div>
+      </footer>
+   </body>
+</html>

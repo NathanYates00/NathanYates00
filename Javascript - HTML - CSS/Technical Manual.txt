@@ -1,0 +1,218 @@
+================================================================================
+				Technical Manual
+================================================================================
+
+This technical manual is for the website "Car guidance for new drivers".
+
+================================================================================
+				Table of Contents
+================================================================================
+
+(1) Who is the technical manual for?
+
+(2) HTML & CSS (Mobile view)
+
+	- (2.1) Hamburger menu icon
+		- (2.1.1) Hamburger menu icon positioning and size
+		- (2.1.2) Hamburger menu lines properties
+		- (2.1.3) Hamburger menu icon caption
+		- (2.1.4) Hamburger menu icon colour change
+
+	- (2.2) Drop-down menu
+		- (2.2.1) Drop-down menu appearance
+		- (2.2.2) Drop-down menu function
+		- (2.2.3) Drop-down menu positioning
+		- (2.2.4) Drop-down menu navigation links highlighted
+
+================================================================================
+			(1) Who is the technical manual for?
+================================================================================
+
+Having a technical manual in place will allow for future changes to the website 
+and its webpages, as well as continuous maintenance.
+
+Not only will this then benefit someone that is making the changes who is not 
+the original developer, but it will also benefit the original developer as 
+details can be forgotten, making it much more challenging when coming back to it.
+
+It will cover a major part of the HTML and CSS, where explanation of how it
+functions will be helpful for future changes.
+
+================================================================================
+			    (2) HTML & CSS (Mobile view)
+================================================================================
+
+The CSS code for the mobile view will be documented first, seeing as the mobile
+view was developed first, followed by the desktop view once the features and
+content were present on the mobile view.
+
+
+(2.1) Hamburger menu icon:
+The hamburger menu icon is only present for the mobile view, as the navigation 
+links are present without a drop-down menu on the desktop view, without the need
+of the hamburger menu. When clicked, this hamburger menu icon will reveal the
+drop-down menu for the users. 
+
+Being as the hamburger menu icon is entirely CSS and not JavaScript, there is 
+multiple blocks of code for the hamburger menu to function.
+
+
+
+	(2.1.1) Hamburger menu icon positioning and size:
+The positioning and size of the hamburger menu icon on the webpages was done 
+by using: 
+	.header .menu-icon {   
+	   	cursor: pointer;
+	   	float: right;
+	   	padding: 10px 20px 30px;
+	   	position: relative;
+	   	user-select: none; }
+
+Using this code decides the cursor icon when hovering over the icon too.
+It forces the menu icon to be in the top right of the screen, which is where
+users tend to find a hamburger menu. The padding creates the menu icon to be 
+big enough that the user can press without struggling.
+
+
+	(2.1.2) Hamburger menu lines properties:
+The lines on the hamburger menu were created by CSS code too, creating the middle
+line by using:
+	.header .menu-icon .nav-icon {
+	   background: #FFFFFF;
+	   display: block;
+	   height: 2px;
+	   position: relative;
+	   transition: background .2s ease-out;
+	   width: 18px;
+	   margin-top: 20px; }
+
+By having the middle line created, the other two lines were created using:
+	.header .menu-icon .nav-icon:before,
+	.header .menu-icon .nav-icon:after {
+	   background: #FFFFFF;
+	   content: '';
+	   display: block;
+	   height: 100%;
+	   position: absolute;
+	   transition: all .2s ease-out;
+	   width: 100%; }
+
+This stacked the other two lines undeneath the middle line, so moving the lines
+to be above and below the middle line was achieved using:
+	.header .menu-icon .nav-icon:before {
+	   top: 8px; }
+	.header .menu-icon .nav-icon:after {
+	   top: -8px; }
+
+The positioning of the lines within the hamburger menu, as it was not originally
+set in the middle, was achieved by using: 
+	label span {
+	   position: absolute;
+	   left: 30%;
+	   top: 45%; }
+
+For the rotation of the lines when clicked, this code was used:
+	.header .menu-btn:checked~.menu-icon .nav-icon:before {
+	   transform: rotate(-45deg);
+	   top: 0; }
+	.header .menu-btn:checked~.menu-icon .nav-icon:after {
+	   transform: rotate(45deg);
+	   top: 0; }
+
+And to make the middle line disappear so only the cross was present, this code
+was used:
+	.header .menu-btn:checked~.menu-icon .nav-icon {
+	   background: transparent; }
+
+
+	(2.1.3) Hamburger menu icon caption:
+Placing 'Menu' in the label tag ensured the caption would be inside the hamburger
+menu icon, so users know its function for the website. This was achieve by doing:
+	<label class="menu-icon" for="menu-btn">
+       Menu<span class="nav-icon"></span></label>
+
+
+	(2.1.4) Hamburger menu icon colour change:
+The background colour change from green to red was achieved by using:
+	input:checked+label {
+	   background-color: #FF0000; }
+
+This was so when the user clicks on the hamburger menu, it is obvious that by
+clicking again, the drop-down menu would collapse.
+
+
+
+(2.2) Drop-down menu:
+The drop-down menu will appear as a result of clicking on the hamburger menu
+icon, and displays the links to the webpages. The current page the user is on
+will be highlighted.
+
+
+	(2.2.1) Drop-down menu appearance:
+The appearance of the drop-down menu is created by using:
+	.header li a {
+	   display: block;
+	   padding: 20px 20px;
+	   text-decoration: none;
+	   border: 2px solid #000000; }
+
+This ensures the links are not underlined and are padded enough so the blocks are
+large enough to click easy.
+
+
+	(2.2.2) Drop-down menu function:
+To ensure the drop-down menu is not present prior to clicking the hamburger menu,
+this code was used:
+	.header .menu {
+	   clear: both;
+	   max-height: 0;
+	   transition: max-height 0.2s ease-out;
+	   background: #009900;
+	   text-align: center;
+ 	   margin-top: 100px;
+ 	   margin-bottom: 10px; }
+
+This code also ensured the drop-down menu was far enough from the hamburger menu,
+as problems were occuring where the drop-down menu was slightly on the header.
+The transition is present so the drop-down menu does not just quickly open
+or collapse when the hamburger menu is clicked.
+
+
+	(2.2.3) Drop-down menu positioning:
+The positioning of the drop-down menu was achieved using:
+	.menu-bar nav {
+	   margin-top: 18px;
+	   text-align: center;
+	   float: right;
+	   display: inline-block;
+	   vertical-align: top; }
+
+This ensures the drop-down menu was to the right of the users device, as the
+hamburger menu was on this right too, so it made sense to have the drop-down menu
+directly below.
+
+
+	(2.2.4) Drop-down menu navigation links highlighted:
+The current page the user is on will be highlighted on the drop-down menu using:
+	.menu a.active {
+	   background-color: #A52A2A;
+	   color: #FFFFFF; }
+
+This is to allow the user to know which page they are currently on.
+
+The remaining four pages will be highlighted in a white background to inform the
+user that they can click it to move onto that highlighted page, though this does
+not apply to the current page the user is on. This was achieved by using:
+	.menu a:hover {
+	   background-color: #FFFFFF;
+	   color: #000000; }
+
+================================================================================
+				    Contact
+================================================================================
+
+		   For further instruction: 311624@gllm.ac.uk
+
+================================================================================
+                    © Copyright 2021, Produced by Nathan Yates
+================================================================================

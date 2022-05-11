@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Purchasing guidance</title>
+	  <!-- Links to the website's CSS -->
+      <link rel="stylesheet" href="screen.css"/>
+	  <!-- Favicons for all devices used to view the website -->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <header class="header">
+         <div class="menu-bar">
+		 
+			<!-- Container for the menu, inside is the logo and nav links -->
+            <div id="menu-container">
+               <a href="index.html" class="logo">
+               <img src="images/logo.png" alt="Logo"></a>
+               <nav>
+			   
+				  <!-- Input for current status of hamburger menu, default is off so drop-down menu is hidden -->
+                  <input class="menu-btn" type="checkbox" id="menu-btn"/>
+				  
+				  <!-- Hamburger menu transition is created through the label tag -->
+                  <label class="menu-icon" for="menu-btn">
+                  Menu<span class="nav-icon"></span>
+                  </label>
+				  
+				  <!-- A container to make the nav links in flexbox -->
+                  <ul class="menu"  id = "flexbox-container">
+                     <li>
+                        <a href="index.html">Home Page</a>
+                     </li>
+                     <li>
+                        <a class="active" href="purchasing.html">Purchasing guidance</a>
+                     </li>
+                     <li>
+                        <a href="insuring.html">Insuring your car</a>
+                     </li>
+                     <li>
+                        <a href="runningCosts.html">Running costs</a>
+                     </li>
+                     <li>
+                        <a href="recommended.html">Cars right for you</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <h1>Purchasing guidance</h1>
+	  
+      <section>
+		 <!-- First content box -->
+         <div class="contentbox1">
+            <h2>What ways can I buy a car?</h2>
+            <p>Buying a car outright or going through a financing option are ways of owning a car, with money being an issue for new drivers majority of the time, the best method of buying a car can sometimes be unclear.</p>
+            
+			<h2>Which method is most cost-effective?</h2>
+            <h5>Buying outright</h5>
+            <p>Buying a car outright is usually the best option in most cases for cost effectiveness, as you are not paying an increased price overall due to no interest rates on the cost of the car.</p>
+            <p>Although, this means that you are going to pay a large sum of money instantly, especially on new cars. Prefering to pay a lower monthly payment rather than a lump sum instantly is where the other methods come into the situation.</p>
+           
+		    <h5>Hire purchase financing</h5>
+            <p>Hire purchase (HP) is the first financing option, a method that can be used for new and old cars which are monthly payments. This has a low initial deposit, and monthly payments until the contracted period has ended, where you will then own the car.</p>
+            <p>Advantages of HP are that they are flexible repayments, as opposed to a lump sum. They are fair fixed interest rates, and are also easy to arrange with local car dealers.</p>
+            <p>Disadvantages of HP are that the overall payment is more expensive than buying outright, as well as ownership of the car is not until the final payment which some drivers do not like.</p>
+           
+		    <h5>Personal contract purchase</h5>
+            <p>Personal contract purchase (PCP) is the other financing option, similar to HP in that you do not pay a lump sum initially, but has different features to HP. At the end of the agreed period, the driver decides whether to trade the car in to start a contract with another car, give the car back to the dealer without paying any lump sum, or pay a lump sum (Balloon payment) and have complete ownership of the car.</p>
+            <p>Advantages of PCP are that the monthly payments will be lower than HP, again flexible repayments stretched from a year to several years, and the choice at the end of the agreed period so you are not stuck with the car if it is unwanted.</p>
+            <p>Disadvantages of PCP are that the total amount can be higher than HP, the balloon payment can be a large lump sum to pay all at once, and exceeding the agreed mileage as well as damage to the car will incur additional charges if you are giving the car back to the dealership.</p>
+           
+ 		    <br>
+			<!-- Link to information source -->
+		    <p class = "websiteSource">Information via: <a href="https://www.moneyadviceservice.org.uk/en/articles/whats-the-best-way-to-finance-buying-a-car" target="_blank"> Money Advice Service</a></p>
+         </div>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+         <h4>Car purchasing infographic <br>(Click to enlarge)</h4>
+		 
+		 <!-- Link to infographic source shown only on desktop view -->
+         <div id = "desktopSource">
+            <p class = "infographicSource">Infographic via: <a href="https://creditsquared.com/new-car-buying-guide" target="_blank"> Credit Squared.</a></p>
+         </div>
+		 
+         <!-- Infographic in the lightbox -->
+         <img class="infographic" src="images/purchasingInfographic.png" onclick="openModal();currentSlide(1)" alt="Car insurance infographic">
+         
+		 <!-- The Modal (Background) -->
+         <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+			
+            <!-- Infographic once clicked -->
+            <img class="lightbox" src="images/purchasingInfographic.png" onclick="currentSlide(1)" alt="Car insurance infographic">
+         </div>
+		 
+		 <!-- Javascript for the infographic lightbox -->
+         <script>
+            <!-- Controls to open the Modal -->
+            function openModal() {
+              document.getElementById("myModal").style.display = "block";
+            }
+            
+            <!-- Controls to close the Modal -->
+            function closeModal() {
+              document.getElementById("myModal").style.display = "none";
+            }
+         </script>
+		 
+		 <!-- Link to infographic source shown only on mobile view -->
+         <div id = "mobileSource">
+            <p class = "infographicSource">Infographic via: <a href="https://creditsquared.com/new-car-buying-guide" target="_blank"> Credit Squared.</a></p>
+         </div>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+		 <!-- Second content box -->
+         <div class="contentbox2">
+            <h2 class="heading2">Which purchasing method is right for me?</h2>
+            <p>There are a few considerations before deciding which method is best for you. Firstly is the amount of money you currently have, as well as if you have a steady income or are out of work.</p>
+            <p>Another consideration is whether you want a new car, or one that has had several owners and is a few years old.</p>
+            <p>Last consideration is whether you want to keep the car for a number of years, or if you want something temporary and upgrade in the near future.</p>
+            
+			<h2 class="heading2">Connecting the considerations to a method.</h2>
+            <p>If you have a large amount of money, and/or on a steady income, then you could go for a new car buying outright or via the two financing methods, as you will have the money to do whatever suits you best. Buying a car outright will give you full ownership of the car and is the most cost effective method, or you could go for PCP and change to a different car within a few years.</p>
+            <p>For those that are out of work or a student, perhaps buying an older car outright or getting a finance method on a new car would be the better choice. The low lump sum will be affordable, or low monthly payments are easily payable without the worry of not being able to make the repayments.</p>
+            <p>Wanting to keep a car for many years can lead to either buying outright or a finance method, as you will easily keep the car for 2+ years. But if you want to have a more temporary car, buy an old car outright or get a new car on PCP as you will not be tied to the car and can trade it back in without the balloon payment.</p>
+         </div>
+         
+		 <!-- Horizontal rule present on both mobile and desktop view -->
+		 <hr>
+         <h3>Things to know about car financing</h3>
+		 
+		 <!-- Wrapper for YouTube iFrame -->
+         <div class="iframeWrapper">
+            <iframe src="https://www.youtube.com/embed/cAOm0UyupHc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>								
+         </div>
+      </section>
+	  
+	  <!-- Clearfix present to ensure buttons clears other elements -->
+      <div class="clearfix">
+         <a href="index.html" class="previousButton">&#8592; Previous Page</a>
+         <a href="insuring.html" class="nextButton">Next Page &#8594;</a>
+      </div>
+	  
+      <footer>
+		 <!-- Small text in footer -->
+         <small>&copy; Copyright 2021, Produced by Nathan Yates</small>
+         <br>
+		 <!-- When email link clicked opens Gmail webpage creating email draft to 311624@gllm.ac.uk -->
+         <div class="footerLinks">
+            <small>Email Address:
+            <a href="mailto:311624@gllm.ac.uk">311624@gllm.ac.uk</a>
+            </small>											
+         </div>
+      </footer>
+   </body>
+</html>

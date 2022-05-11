@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Running costs</title>
+	  <!-- Links to the website's CSS -->
+      <link rel="stylesheet" href="screen.css"/>
+	  <!-- Favicons for all devices used to view the website -->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <header class="header">
+         <div class="menu-bar">
+		 
+			<!-- Container for the menu, inside is the logo and nav links -->
+            <div id="menu-container">
+               <a href="index.html" class="logo">
+               <img src="images/logo.png" alt="Logo"></a>
+               <nav>
+			   
+				  <!-- Input for current status of hamburger menu, default is off so drop-down menu is hidden -->
+                  <input class="menu-btn" type="checkbox" id="menu-btn" />
+					  
+				  <!-- Hamburger menu transition is created through the label tag -->
+                  <label class="menu-icon" for="menu-btn">
+                  Menu<span class="nav-icon"></span>
+                  </label>
+				  
+				  <!-- A container to make the nav links in flexbox -->
+                  <ul class="menu"  id = "flexbox-container">
+                     <li>
+                        <a href="index.html">Home Page</a>
+                     </li>
+                     <li>
+                        <a href="purchasing.html">Purchasing guidance</a>
+                     </li>
+                     <li>
+                        <a href="insuring.html">Insuring your car</a>
+                     </li>
+                     <li>
+                        <a class="active" href="runningCosts.html">Running costs</a>
+                     </li>
+                     <li>
+                        <a href="recommended.html">Cars right for you</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <h1>Running costs</h1>
+	  
+      <section>
+		 <!-- First content box -->
+         <div class="contentbox1">
+            <h2>What are the car running costs?</h2>
+            <p>When buying a car, you have to not only consider the buying price and insurance, but also the running costs as they will constantly be there.<br> Running costs can be difficult to keep up with for some new drivers, especially those that are teenagers.</p>
+            <p>The running costs are refueling, road tax, servicing, MOT tests, wear and tear, and optional coverage like breakdown cover. <br>Along with this, the car will depreciate in value, so the price you paid initially will be decreased when it comes to reselling the car.</p>
+           
+ 		    <h2>What can I do about these running costs?</h2>
+            <p>Majority of the running costs cannot be reduced due to it being fixed amounts, for example MOT tests, road tax and services. Fuel, replacement of parts like tyres through wear and tear, and breakdown cover can be decreased or completely taken away.</p>
+            <p>MOT tests will be annual, and cannot be avoided, as well as road tax being anywhere from £20 to upwards of £200.<br> Services are optional but some people opt for them to keep the price of the car high when reselling, as well as ensuring the car is 100% serviced and looked after properly.</p>
+            <p>Fuel prices differ depending on the type of fuel and where you buy it from. Typically you find that supermarket petrol stations are cheaper than more premium stations like Shell and BP.<br>Going for the cheap fuel type at a supermarket will help keep fuel costs lower in the long run.</p>
+            <p>Breakdown cover can be avoided altogether, it is not a legal requirement to have unlike insurance.<br> Replacement of car parts like tyres can be expensive if going for the premium tyres, but some tyres are cheap enough to keep you going without worry.
+         </div>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+         <H4>Running costs infographic <br>(Click to enlarge)</H4>
+		 
+	     <!-- Link to infographic source shown only on desktop view -->
+         <div id = "desktopSource">
+            <p class = "infographicSource">Infographic via: <a href="https://www.ukcredit.co.uk/money-life/homelife/hidden-costs-of-running-a-car/" target="_blank"> UK Credit.</a></p>
+         </div>
+			
+         <!-- Infographic in the lightbox -->
+         <img class="infographic" src="images/costsInfographic.jpg" onclick="openModal();currentSlide(1)" alt="Car insurance infographic">
+        
+ 		 <!-- The Modal (Background) -->
+         <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+			
+            <!-- Infographic once clicked -->
+            <img class="lightbox" src="images/costsInfographic.jpg" onclick="currentSlide(1)" alt="Car running costs infographic">
+         </div>
+		 
+		 <!-- Javascript for the infographic lightbox -->
+         <script>
+            <!-- Controls to open the Modal -->
+            function openModal() {
+              document.getElementById("myModal").style.display = "block";
+            }
+            
+            <!-- Controls to close the Modal -->
+            function closeModal() {
+              document.getElementById("myModal").style.display = "none";
+            }
+         </script>
+		 
+		 <!-- Link to infographic source shown only on mobile view -->
+         <div id = "mobileSource">
+            <p class = "infographicSource">Infographic via: <a href="https://www.ukcredit.co.uk/money-life/homelife/hidden-costs-of-running-a-car/" target="_blank"> UK Credit.</a></p>
+         </div>
+		 
+		 <!-- Horizontal rule only present on mobile view -->
+         <hr class = "mobilehr">
+		 
+		 <!-- Second content box -->
+         <div class="contentbox2">
+            <h2 class="heading2">How to keep your running costs to a minimum</h2>
+            <p>When looking to buy a car, keep in mind the car's efficiency of fuel consuption, as something that is good on fuel will have you stopping at petrol stations less.<br> Along with this, driving economically by sticking to the speed limits and staying in the highest gear for your speed will be the best option.</p>
+            <br>
+			<p>MOT tests take place yearly, but only after the car is three years old. This factor could be taken in mind and may push you in the new car direction if you are looking to stay away from MOT tests, as well as the car being with new parts so no problems will occur immediately.</p>
+            <br>
+			
+			<!-- Link to information source -->
+			<p class = "websiteSource">Information via: <a href="https://www.theaa.com/driving-advice/driving-costs/running-costs" target="_blank">TheAA.</a></p>
+         </div>
+		 
+		 <!-- Horizontal rule present on both mobile and desktop view -->
+         <hr>
+         <h3>Exploring the running costs of cars</h3>
+		 
+		 <!-- Wrapper for YouTube iFrame -->
+         <div class="iframeWrapper">
+            <iframe src="https://www.youtube.com/embed/x-4JlxYvt7k" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>								
+         </div>
+      </section>
+	  
+	  <!-- Clearfix present to ensure buttons clears other elements -->
+      <div class="clearfix">
+         <a href="insuring.html" class="previousButton">&#8592; Previous Page</a>
+         <a href="recommended.html" class="nextButton">Next Page &#8594;</a>
+      </div>
+      <footer>
+	     <!-- Small text in footer -->
+         <small>&copy; Copyright 2021, Produced by Nathan Yates</small>
+         <br>
+		 <!-- When email link clicked opens Gmail webpage creating email draft to 311624@gllm.ac.uk -->
+         <div class="footerLinks">
+            <small>Email Address:
+            <a href="mailto:311624@gllm.ac.uk">311624@gllm.ac.uk</a>
+            </small>											
+         </div>
+      </footer>
+   </body>
+</html>
